@@ -9,5 +9,5 @@ urlpatterns = [
     path('onas/', views.about),
     path('przepisy/', include('recipes.urls')),
     path('uzytkownicy/', include('accounts.urls')),
-
+    path('', views.homepage),
 ]

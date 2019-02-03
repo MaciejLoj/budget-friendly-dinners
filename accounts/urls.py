@@ -6,7 +6,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path('logowanie/',
+    path('logowanie/',views.login)
 
 
 ]

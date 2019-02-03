@@ -19,4 +19,4 @@ def register(request):
     else:
         f = UserCreationForm()
 
-    return render(request, 'cadmin/register.html', {'form': f})
+    return render(request, 'accounts/register.html', {'form': f})
