@@ -12,34 +12,37 @@ class Type(models.Model):
         return self.type_name
 
 class Five(models.Model):
+    typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField()
-    #author = models.ForeignKey(User)
+    author = models.ForeignKey(User,default=None, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
 
 class Ten(models.Model):
+    typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField()
-    #author = models.ForeignKey(User)
+    author = models.ForeignKey(User,default=None, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
 
 class Twenty(models.Model):
+    typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField()
-    #author = models.ForeignKey(User)
+    author = models.ForeignKey(User,default=None, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
