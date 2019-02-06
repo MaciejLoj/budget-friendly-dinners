@@ -11,31 +11,13 @@ class Type(models.Model):
     def __str__(self):
         return self.type_name
 
-class Five(models.Model):
-    typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
-    title = models.CharField(max_length=50)
-    slug = models.SlugField()
-    body = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField()
-    author = models.ForeignKey(User,default=None, on_delete=models.CASCADE)
+class Price(models.Model):
+    price = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.title
+        return self.price
 
-class Ten(models.Model):
-    typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
-    title = models.CharField(max_length=50)
-    slug = models.SlugField()
-    body = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField()
-    author = models.ForeignKey(User,default=None, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.title
-
-class Twenty(models.Model):
+class Recipe(models.Model):
     typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     slug = models.SlugField()

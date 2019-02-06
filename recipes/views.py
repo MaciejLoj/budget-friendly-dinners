@@ -20,5 +20,4 @@ def recipe_detail(request,slug):
     return HttpResponse(slug)
 
 def new_recipes(request):
-    #all_recipes = Recipes.object.all.sort.date
-    # return render(request, 'recipes/new_recipes.html', 'recipes':all_recipes
+    pass # return render(request, 'recipes/new_recipes.html', 'recipes':all_recipes

@@ -1,10 +1,9 @@
 from django.contrib import admin
-from .models import Type,Five,Ten,Twenty
+from .models import Type,Price, Recipe
 
 
 # Register your models here.
 
 admin.site.register(Type)
-admin.site.register(Five)
-admin.site.register(Ten)
-admin.site.register(Twenty)
+admin.site.register(Price)
+admin.site.register(Recipe)
