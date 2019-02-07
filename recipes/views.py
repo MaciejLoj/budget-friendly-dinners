@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Recipe
 
 def five_zlotys_dinners(request):
     pass
@@ -20,4 +21,5 @@ def recipe_detail(request,slug):
     return HttpResponse(slug)
 
 def new_recipes(request):
-    pass # return render(request, 'recipes/new_recipes.html', 'recipes':all_recipes
+    new = Recipe.objects.all().order_by('date') # nazwa z modeli
+    return render(request, 'recipes/new_recipes.html',{'recipes': new})

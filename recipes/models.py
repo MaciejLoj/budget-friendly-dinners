@@ -19,6 +19,7 @@ class Price(models.Model):
 
 class Recipe(models.Model):
     typ = models.ForeignKey(Type, default=None, on_delete=models.CASCADE)
+    price = models.ForeignKey(Price, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     slug = models.SlugField()
     body = models.TextField()

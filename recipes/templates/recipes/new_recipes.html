@@ -1,6 +1,15 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
+    {% for recipe in recipes %}
+        <div class="recipe">
 
-    <p> Strona ze wszystkimi nowymi przepisami. Niezaleznie od ceny !</p>
+            <h2>{{ recipe.title }}</h2>
+            <p>{{ recipe.image }}</p>
+            <p>{{ recipe.body }}</p>
+            <p>{{ recipe.date }}</p>
+
+        </div>
+    {% endfor %}
+
 {% endblock %}
