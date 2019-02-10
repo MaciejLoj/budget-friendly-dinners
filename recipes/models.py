@@ -30,6 +30,9 @@ class Recipe(models.Model):
     def __str__(self):
         return self.title
 
+    def snippet(self):
+        return self.body[:30] + '...'
+
 #https://stackoverflow.com/questions/34006994/how-to-upload-multiple-images-to-a-blog-post-in-django
 # https://stackoverflow.com/questions/40218080/how-to-add-multiple-images-to-the-django?rq=1
 # https://www.youtube.com/watch?v=jjdeOp_E7OU many photos
