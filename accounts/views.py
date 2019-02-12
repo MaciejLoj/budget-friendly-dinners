@@ -9,7 +9,8 @@ def login(request):
 
 
 def register(request):
-    return render(request,'accounts/register.html')
+    form = UserCreationForm()
+    return render(request,'accounts/register.html',{'form':form})
 
 
     # if request.method == 'POST':

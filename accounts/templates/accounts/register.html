@@ -1,7 +1,12 @@
-{% extends 'templates/base_layout.html' %}
+{% extends 'base_layout.html' %}
 
 {% block content %}
 
-    <h1> Zarejestruj się i zgarniaj vouchery na akcesoria kuchenne! </h1>
+    <h2> Zarejestruj się i zgarniaj vouchery na akcesoria kuchenne! </h2>
+    <form class="site-form" action="index.html" method="post">
+        {{form}}
+        <input type="submit" value="Zarejestruj się">
+    </form>
+
 {% endblock %}
 
