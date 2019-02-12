@@ -2,8 +2,9 @@
 
 {% block content %}
 
-    <h2> Zarejestruj się i zgarniaj vouchery na akcesoria kuchenne! </h2>
-    <form class="site-form" action="index.html" method="post">
+    <h2> Zarejestruj się, dodawaj przepisy i zgarniaj vouchery na akcesoria kuchenne! </h2>
+    <form class="site-form" action="" method="post">
+        {% csrf_token %}
         {{form}}
         <input type="submit" value="Zarejestruj się">
     </form>
