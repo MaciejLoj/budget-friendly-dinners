@@ -9,14 +9,17 @@ def login(request):
 
 
 def register(request):
-    if request.method == 'POST':
-        f = UserCreationForm(request.POST)
-        if f.is_valid():
-            f.save()
-            messages.success(request, 'Account created successfully')
-            return redirect('register')
+    return render(request,'accounts/register.html')
 
-    else:
-        f = UserCreationForm()
 
-    return render(request, 'accounts/register.html', {'form': f})
+    # if request.method == 'POST':
+    #     f = UserCreationForm(request.POST)
+    #     if f.is_valid():
+    #         f.save()
+    #         messages.success(request, 'Account created successfully')
+    #         return redirect('register')
+    #
+    # else:
+    #     f = UserCreationForm()
+    #
+    # return render(request, 'accounts/register.html', {'form': f})

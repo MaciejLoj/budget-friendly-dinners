@@ -18,7 +18,9 @@ def twenty_zlotys_dinners(request):
     #return render(request, 'recipes/twenty_zlotys.html',#'recipes':all_recipes )
 
 def recipe_detail(request,slug):
-    return HttpResponse(slug)
+    # will find a recipe in the database by slug, our given argument()
+    recipe = Recipe.objects.get(slug=slug)
+    return render(request, 'recipes/recipe_details.html', {'recipe':recipe})
 
 def new_recipes(request):
     new = Recipe.objects.all().order_by('date') # nazwa z modeli

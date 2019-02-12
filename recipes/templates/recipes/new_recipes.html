@@ -3,10 +3,13 @@
 {% block content %}
     {% for recipe in recipes %}
         <div class="recipe">
-            <h2><a href="{% url 'detail' slug=recipe.slug %}">{{recipe.title}}</a></h2>
-            <p>{{ recipe.image }}</p>
+            <!--a href url 'detail' slug not working !! Its the url for
+            specific recipe. Slug is taken from urls and datbase-->
+            <h2><a href="#">{{recipe.title}}</a></h2>
+            <img src="{{ recipe.image.url }}"/>
             <p>{{ recipe.body }}</p>
             <p>{{ recipe.date }}</p>
+            <p>{{ recipe.slug }}</p>
 
         </div>
     {% endfor %}
