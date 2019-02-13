@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Recipe
+from django.contrib.auth.decorators import login_required
 
 def five_zlotys_dinners(request):
     pass
@@ -25,3 +26,12 @@ def recipe_detail(request,slug):
 def new_recipes(request):
     new = Recipe.objects.all().order_by('date') # nazwa z modeli
     return render(request, 'recipes/new_recipes.html',{'recipes': new})
+
+
+@login_required(login_url="/uzytkownicy/logowanie/")
+def create_recipe(request):
+    return render(request, 'recipes/create_recipe.html')
+
+# User has to be logged in to create a recipe
+# decorator extends the function, add additional functionality
+# it requires login which is in (login_url=""), redirect user

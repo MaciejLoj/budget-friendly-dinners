@@ -12,8 +12,8 @@
         <nav>
             <ul>
                 <li>
-                    <!--after clicking submit button we will be redirected to {% url 'recipes:logout' %}-->
-                    <form class="logout-link" action="{% url 'recipes:logout' %}" method="post"></form>
+                    <!--after clicking submit button we will be redirected to {% url 'accounts:logout' %}-->
+                    <form class="logout-link" action="{% url 'accounts:logout' %}" method="post"></form>
                     {% csrf_token %}
                     <button type="submit">Wyloguj się</button>
                 </li>
