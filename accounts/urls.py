@@ -8,7 +8,7 @@ from . import views
 app_name = 'accounts'
 
 urlpatterns = [
-    path('logowanie/',views.login, name='login'),
+    path('logowanie/',views.login_view, name='login'),
     path('rejestracja/', views.register, name='register')
 
 
