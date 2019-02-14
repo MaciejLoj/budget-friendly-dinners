@@ -6,7 +6,14 @@
     <form class="login-form" action="" method="post">
         {% csrf_token %}
         {{form}}
+        {% if request.GET.next %}
+        <!--wystepuje wylacznie w sytuacji gdy w urlu mamy NEXT czyli przy naszym
+        login_required. gdy tej sytuacji nie ma to if request nie dziala-->
+            <input type="hidden" name="next" value="{{request.GET.next}}">
+        {% endif %}
+
         <input type="submit" value="Zaloguj się">
+
     </form>
 
 {% endblock %}
