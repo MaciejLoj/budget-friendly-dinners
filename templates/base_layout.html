@@ -9,8 +9,10 @@
 <body>
     <header class="head">
         <a href="{% url 'home' %}">Strona glowna</a>
+
         <nav>
             <ul>
+                {% if user.is_authenticated %}
                 <li>
                     <!--after clicking submit button we will be redirected to {% url 'accounts:logout' %}-->
                     <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
@@ -18,8 +20,16 @@
                         <button type="submit">Wyloguj się</button>
                     </form>
                 </li>
+                <li><a href="{% url 'recipes:create' %}" class="">Dodaj przepis</a></li>
+                {% else %}
+                <li><a href="{% url 'accounts:login' %}" class="">Logowanie</a></li>
+                <li><a href="{% url 'accounts:register' %}" class="">Rejestracja</a></li>
+
             </ul>
         </nav>
+
+
+        {% endif %}
     </header>
 
     <div class="templates">
