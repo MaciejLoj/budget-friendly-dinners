@@ -5,7 +5,7 @@ from django.urls import path
 from django.conf.urls import url
 from . import views
 
-app_name ='recipes'
+app_name = 'recipes'
 
 urlpatterns = [
     path('', views.new_recipes, name='list'),
