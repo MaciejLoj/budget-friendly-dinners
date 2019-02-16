@@ -9,7 +9,7 @@ const slug_creator = (val) => {
 };
 
 
-titleInput.addEventListener('keyup',(e)=>{
-    slugInput.setAttribute('value',slug_creator(titleInput.value))
+titleInput.addEventListener('keyup',function() {
+    slugInput.setAttribute('value',slug_creator(titleInput.value));
 
 });
