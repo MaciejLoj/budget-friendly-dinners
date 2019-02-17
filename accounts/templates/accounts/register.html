@@ -5,7 +5,7 @@
     <h2> Zarejestruj się, dodawaj przepisy i zgarniaj vouchery na akcesoria kuchenne! </h2>
     <form class="register-form" action="" method="post">
         {% csrf_token %}
-        {{form}}
+        {{form.as_p}}
         <input type="submit" value="Zarejestruj się">
     </form>
 

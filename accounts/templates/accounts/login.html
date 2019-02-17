@@ -5,7 +5,7 @@
     <h2> Zaloguj się! </h2>
     <form class="login-form" action="" method="post">
         {% csrf_token %}
-        {{form}}
+        {{form.as_p}}
         {% if request.GET.next %}
         <!--wystepuje wylacznie w sytuacji gdy w urlu mamy NEXT czyli przy naszym
         login_required. gdy tej sytuacji nie ma to if request nie dziala-->

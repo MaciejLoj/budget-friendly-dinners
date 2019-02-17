@@ -10,11 +10,11 @@ class CreateRecipe(forms.ModelForm):
         model = models.Recipe
         fields = ['title','body','slug','image']
 
-# customuserform z mailem loginem, passwordem
 
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField(max_length=254, help_text='Wymagane pole.')
+
+    email = forms.EmailField(max_length=25, help_text='Wymagane pole')
 
     class Meta:
         model = User
-        fields = ['username','password1','password2','email']
+        fields = ['username','password1','password2','email',]

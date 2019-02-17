@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
 from dinners.recipes.forms import SignUpForm
 
 
@@ -25,15 +25,16 @@ def login_view(request):
 
 def register(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST) # rozszerzenie user creation o email
+        form = SignUpForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request,user)
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
             return redirect('recipes:list')
     else:
         form = SignUpForm()
     return render(request,'accounts/register.html',{'form': form})
-
 
 def logout_view(request):
     if request.method == 'POST':
