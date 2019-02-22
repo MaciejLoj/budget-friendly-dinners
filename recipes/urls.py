@@ -14,6 +14,6 @@ urlpatterns = [
     path('do-10-zl/', views.ten_zlotys_dinners, name=''),
     path('do-20-zl/', views.twenty_zlotys_dinners, name=''),
     url(r'^(?P<slug>[\w]-]+)/$', views.recipe_detail, name='detail'),
-    # zmienna slug zostaje wyslana do views.py jako argument
+
 
 ]

@@ -6,18 +6,14 @@ from . import forms
 
 def five_zlotys_dinners(request):
     pass
-    #all_recipes = Recipes.objects.all() pokaze wszystkie za ta cene
-    #return render(request, 'recipes/five_zlotys.html',#'recipes':all_recipes)
 
 def ten_zlotys_dinners(request):
     pass
-    # all_recipes = Recipes.objects.all() pokaze wszystkie za ta cene
-    #return render(request, 'recipes/ten_zlotys.html',#'recipes':all_recipes)
+
 
 def twenty_zlotys_dinners(request):
     pass
-    # all_recipes = Recipes.objects.all() pokaze wszystkie za ta cene
-    #return render(request, 'recipes/twenty_zlotys.html',#'recipes':all_recipes )
+
 
 def recipe_detail(request,slug):
     # will find a recipe in the database by slug, our given argument()
@@ -42,6 +38,3 @@ def create_recipe(request):
         form = forms.CreateRecipe()
     return render(request, 'recipes/create_recipe.html', {'form':form})
 
-# User has to be logged in to create a recipe
-# decorator extends the function, add additional functionality
-# it requires login which is in (login_url=""), redirect user

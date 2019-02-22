@@ -3,8 +3,8 @@
 {% block content %}
     {% for recipe in recipes %}
         <div class="recipe">
-            <!--a href url 'detail' slug not working !! Its the url for
-            specific recipe. Slug is taken from urls and datbase-->
+            <!--a href url 'detail' slug not working. Its the url for
+            specific recipe. Slug is taken from urls and database-->
             <h2><a href="#">{{recipe.title}}</a></h2>
             <img src="{{ recipe.image.url }}"/>
             <p>{{ recipe.body }}</p>

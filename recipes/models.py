@@ -1,8 +1,5 @@
 from django.db import models
-from model_utils import Choices
 from django.contrib.auth.models import User
-
-# Create your models here.
 
 
 class Type(models.Model):
@@ -33,8 +30,5 @@ class Recipe(models.Model):
     def snippet(self):
         return self.body[:30] + '...'
 
-#https://stackoverflow.com/questions/34006994/how-to-upload-multiple-images-to-a-blog-post-in-django
-# https://stackoverflow.com/questions/40218080/how-to-add-multiple-images-to-the-django?rq=1
-# https://www.youtube.com/watch?v=jjdeOp_E7OU many photos
 
 # drag and drop photo upload Javascript
