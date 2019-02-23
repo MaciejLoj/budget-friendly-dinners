@@ -4,6 +4,7 @@ from .models import Recipe
 from django.contrib.auth.decorators import login_required
 from . import forms
 
+
 def five_zlotys_dinners(request):
     pass
 
