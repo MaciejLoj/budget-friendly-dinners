@@ -12,7 +12,6 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request,user) # logs you in after signing up
-            # messages.success(request, 'Account created successfully')
             # next to name z login.html
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
@@ -31,10 +30,12 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
+            messages.success(request, 'Account created successfully')
             return redirect('recipes:list')
     else:
         form = SignUpForm()
     return render(request,'accounts/register.html',{'form': form})
+
 
 def logout_view(request):
     if request.method == 'POST':
