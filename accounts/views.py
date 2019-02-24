@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from .forms import SignUpForm
+from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
 
 
 
@@ -26,12 +28,20 @@ def register(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
+            save_it = form.save()
+            save_it.save()
+            subject = 'Potwierdzenie rejestracji!'
+            message = ' Dzieki za rejestracje !'
+            from_email = settings.EMAIL_HOST_USER
+            to_list = [save_it.email,settings.EMAIL_HOST_USER]
+            send_mail(subject, message, from_email, to_list, fail_silently=True)
+            #messages.success(request,'Dziekujemy za rejestracje!')
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            messages.success(request, 'Account created successfully')
             return redirect('recipes:list')
+            # return redirect(request, 'thank_you.html') thank you for registration, please check email
     else:
         form = SignUpForm()
     return render(request,'accounts/register.html',{'form': form})
