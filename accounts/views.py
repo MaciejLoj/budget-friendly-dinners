@@ -36,8 +36,8 @@ def register(request):
             to_list = [save_it.email,settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
             #messages.success(request,'Dziekujemy za rejestracje!')
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
+            username = form.cleaned_data.get('username') #cleans the input into a string
+            raw_password = form.cleaned_data.get('password1') #cleans the input into a string
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('recipes:list')

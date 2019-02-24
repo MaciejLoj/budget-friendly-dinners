@@ -7,6 +7,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 app_name = 'dinners'
 
 urlpatterns = [
@@ -15,6 +16,7 @@ urlpatterns = [
     url(r'^przepisy/', include('recipes.urls')),
     path('uzytkownicy/', include('accounts.urls')),
     path('', views.homepage, name ='home'),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()
