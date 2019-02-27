@@ -31,4 +31,4 @@ class Recipe(models.Model):
         return self.body[:30] + '...'
 
 
-# drag and drop photo upload Javascript
+# to add - drag and drop photo upload Javascript
