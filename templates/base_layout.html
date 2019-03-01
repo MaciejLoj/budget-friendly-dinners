@@ -1,39 +1,61 @@
+{% load bootstrap3 %}
 {% load static from staticfiles %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Budget friendly dinners</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
 </head>
 <body>
-    <header class="head">
-        <a href="{% url 'home' %}">Strona glowna</a>
 
-        <nav>
-            <ul>
-                {% if user.is_authenticated %}
-                <li>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
 
-                    <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-                    {% csrf_token %}
-                        <button type="submit">Wyloguj się</button>
-                    </form>
-                </li>
-                <li><a href="{% url 'recipes:create' %}" class="">Dodaj przepis</a></li>
-                {% else %}
-                <li><a href="{% url 'accounts:login' %}" class="">Logowanie</a></li>
-                <li><a href="{% url 'accounts:register' %}" class="">Rejestracja</a></li>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                </button>
+                <a class="navbar-brand" href="{% url 'home' %}">Homepage</a>
 
-            </ul>
-        </nav>
+            </div>
 
 
-        {% endif %}
-    </header>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Przepisy</a></li>
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                    <li>Witaj, {{ user.username }}</li>
+                    <li><a href="#">Wyloguj</a></li>
+
+                    {% else %}
+                    <li><a href="#">Rejestracja</a></li>
+                    <li><a href="#">Zaloguj</a></li>
+                    {% endif %}
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+    </nav>
 
     <div class="templates">
-        {% block content%}
+        {% block content %}
 
 
         {% endblock %}
