@@ -10,7 +10,8 @@ What's more blog users will be able to contribute by adding their recipes. The o
 * Django
 * Javascript
 * PostgreSQL
-* HTML/CSS
+* HTML
+* CSS / Bootstrap - soon
 
 ## Status
 Project is: _in progress_
