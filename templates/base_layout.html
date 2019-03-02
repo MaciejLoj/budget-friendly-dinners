@@ -31,18 +31,18 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Przepisy</a></li>
+                    <li><a href="{% url 'recipes:list' %}">Przepisy</a></li>
                 </ul>
 
 
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <li>Witaj, {{ user.username }}</li>
-                    <li><a href="#">Wyloguj</a></li>
+                    <li><a href="{% url 'accounts:logout' %}">Wyloguj</a></li>
 
                     {% else %}
-                    <li><a href="#">Rejestracja</a></li>
-                    <li><a href="#">Zaloguj</a></li>
+                    <li><a href="{% url 'accounts:register' %}">Rejestracja</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Zaloguj</a></li>
                     {% endif %}
 
                 </ul>
