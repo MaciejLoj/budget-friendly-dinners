@@ -7,12 +7,12 @@ from . import views
 app_name = 'recipes'
 
 urlpatterns = [
-    path('', views.new_recipes, name='list'),
-    path('dodaj-przepis/', views.create_recipe, name='create'),
-    path('do-5-zl/', views.five_zlotys_dinners, name=''),
-    path('do-10-zl/', views.ten_zlotys_dinners, name=''),
-    path('do-20-zl/', views.twenty_zlotys_dinners, name=''),
-    url(r'^(?P<slug>[\w]-]+)/$', views.recipe_detail, name='detail'),
+    path('', views.NewRecipes.as_view(), name='list'),
+    path('dodaj-przepis/', views.ProtectedView.as_view(), name='create'),
+    path('do-5-zl/', views.FiveZlotysDinners.as_view(), name='tofive'),
+    path('do-10-zl/', views.TenZlotysDinners.as_view(), name='toten'),
+    path('do-20-zl/', views.TwentyZlotysDinners.as_view(), name='totwenty'),
+    url(r'^(?P<slug>[\w]-]+)/$', views.RecipeDetail.as_view(), name='detail'),
 
 
 ]
