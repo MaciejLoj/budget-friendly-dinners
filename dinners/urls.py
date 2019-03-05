@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url, include
+from django.conf.urls import include
 from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
@@ -12,10 +12,10 @@ app_name = 'dinners'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('onas/', views.about),
-    url(r'^przepisy/', include('recipes.urls')),
-    path('uzytkownicy/', include('accounts.urls')),
-    path('', views.homepage, name ='home'),
+    path('onas/', views.AboutView.as_view()),
+    path('przepisy/', include('recipes.urls')),
+    path('uzytkownik/', include('accounts.urls')),
+    path('', views.HomepageView.as_view(), name='home'),
 
 ]
 

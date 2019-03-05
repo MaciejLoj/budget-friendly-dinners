@@ -13,6 +13,4 @@ urlpatterns = [
     path('do-10-zl/', views.TenZlotysDinners.as_view(), name='toten'),
     path('do-20-zl/', views.TwentyZlotysDinners.as_view(), name='totwenty'),
     url(r'^(?P<slug>[\w]-]+)/$', views.RecipeDetail.as_view(), name='detail'),
-
-
 ]

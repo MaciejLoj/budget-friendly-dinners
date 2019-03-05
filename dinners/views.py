@@ -1,11 +1,14 @@
 from django.shortcuts import render
+from django.views import View
 
 
+class AboutView(View):
 
-def about(request):
-    return render(request,'about.html')
-
-def homepage(request):
-    return render(request,'homepage.html')
+    def get(self, request):
+        return render(request, 'about.html')
 
 
+class HomepageView(View):
+
+    def get(self, request):
+        return render(request, 'base_layout.html')
