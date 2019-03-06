@@ -76,5 +76,5 @@ coverage.xml
 *.log
 *.pot
 
-settings_secret.py
+dinners/settings_secret.py
 
