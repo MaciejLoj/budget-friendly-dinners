@@ -5,7 +5,7 @@
 .idea/
 
 # Ignore settings
-dinners/settings_secret/
+secret/
 
 # Icon must end with two \r
 Icon
