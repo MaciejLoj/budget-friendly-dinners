@@ -76,5 +76,5 @@ coverage.xml
 *.log
 *.pot
 
-# Sphinx documentation
-docs/_build/<adinners/settings_secret.py
+/Users/Maciej/Documents/Maciek/MY\ PROJECT\ -\ Budget-friendly\ dinners/dinners/dinners/settings_secret.py
+
