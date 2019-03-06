@@ -77,4 +77,4 @@ coverage.xml
 *.pot
 
 # Sphinx documentation
-docs/_build/
+docs/_build/<adinners/settings_secret.py
