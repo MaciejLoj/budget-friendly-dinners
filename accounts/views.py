@@ -26,13 +26,9 @@ class SignUpView(View):
                       fail_silently=True)
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
-            password_conf = form.cleaned_data.get('password2')
-            if raw_password == password_conf:
-                user = authenticate(username=username, password=raw_password)
-                login(request, user)
-                return redirect('recipes:list')
-            else:
-                pass  # validation error
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('recipes:list')
 
     def get(self, request):
         form = SignUpForm()
