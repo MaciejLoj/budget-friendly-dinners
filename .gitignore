@@ -76,5 +76,5 @@ coverage.xml
 *.log
 *.pot
 
-/Users/Maciej/Documents/Maciek/MY\ PROJECT\ -\ Budget-friendly\ dinners/dinners/dinners/settings_secret.py
+settings_secret.py
 
