@@ -5,10 +5,11 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.views import View
 from django.views.generic import RedirectView
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+from django.contrib import messages
 
 class SignUpView(View):
     template_name = 'accounts/register.html'
@@ -45,28 +46,26 @@ class LogoutView(RedirectView):
         return super(LogoutView, self).get(request, *args, **kwargs)
 
 
-class AddUserView(View):
-    template_name = 'add_user.html'
-
-    def get(self, request):
-        form = UserCreationForm()
-        return render(request, 'add_user.html', {'form': form})
-
-    def post(self, request):
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('index')
-        return render(request, self.template_name, {'form': form})
-
-
 @method_decorator(login_required, name='dispatch')
 class UserInfo(View):
     template_name = 'accounts/user_info.html'
 
     def get(self, request):
         return render(request, self.template_name)
+
+
+class PasswordChangeView(View):
+
+    def post(self, request):
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            messages.success(request, 'Your password was successfully updated!')
+        else:
+            messages.error(request, 'Please correct the error below.')
+        return render(request,'registration/password_change_form.html', {'form': form, 'message': message})
+
+    def get(self, request):
+        form = PasswordChangeForm(request.user)
+        return render(request,'registration/password_change_form.html', {'form': form})
