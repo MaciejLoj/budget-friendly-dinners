@@ -16,6 +16,7 @@ class SignUpView(View):
     def post(self, request):
         form = SignUpForm(request.POST)
         if form.is_valid():
+            form.save()
             save_it = form.save()
             save_it.save()
             subject = 'Potwierdzenie rejestracji!'
@@ -29,6 +30,7 @@ class SignUpView(View):
             user = authenticate(username=username, password=raw_password)
             login(request, user)
             return redirect('recipes:list')
+        return render(request, self.template_name, {'form': form})
 
     def get(self, request):
         form = SignUpForm()
