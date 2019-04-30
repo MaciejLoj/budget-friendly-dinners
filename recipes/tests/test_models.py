@@ -11,3 +11,7 @@ class TestRecipe:
         obj = mixer.blend('recipes.Recipe', body='Chicken pie with lemon')
         result = obj.snippet()
         assert result == 'Chicken pie with lemon...', 'Should return first 30 character and ...'
+
+    def test_str(self):
+        obj = mixer.blend('recipes.Recipe', title='Pierogi')
+        assert str(obj) == 'Pierogi'
