@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from .forms import CreateRecipe
 
 
-class FiveZlotysRecipes(ListView):
+class FiveZlotysRecipesView(ListView):
 
     model = Recipe
     context_object_name = 'sorted_recipes'
@@ -15,7 +15,7 @@ class FiveZlotysRecipes(ListView):
     template_name = 'recipes/recipes_base_template.html'
 
 
-class TenZlotysRecipes(ListView):
+class TenZlotysRecipesView(ListView):
 
     model = Recipe
     context_object_name = 'sorted_recipes'
@@ -23,12 +23,102 @@ class TenZlotysRecipes(ListView):
     template_name = 'recipes/recipes_base_template.html'
 
 
-class FifteenZlotysRecipes(ListView):
+class FifteenZlotysRecipesView(ListView):
 
     model = Recipe
     context_object_name = 'sorted_recipes'
     queryset = Recipe.objects.filter(price='do 15 PLN')
     template_name = 'recipes/recipes_base_template.html'
+
+
+class VeganRecipesView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='WEGE')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class VeganFiveView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='WEGE', price='do 5 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class VeganTenView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='WEGE', price='do 10 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class VeganFifteenView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='WEGE', price='do 15 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class MeatRecipesView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='MIESO')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class MeatFiveView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='MIESO', price='do 5 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class MeatTenView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='MIESO', price='do 10 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class MeatFifteenView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='MIESO', price='do 15 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class VeganAppetizersView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='WEGE', meal_type='Przekąski')
+    template_name = 'recipes/recipes_base_template.html'
+
+
+class VeganAppetizersFiveView(ListView):
+
+    model = Recipe
+    context_object_name = 'sorted_recipes'
+    queryset = Recipe.objects.filter(typ='WEGE', meal_type='Przekąski', price='do 5 PLN')
+    template_name = 'recipes/recipes_base_template.html'
+    
+
+class VeganAppetizersTenView(ListView):
+
+
+
+
+class VeganAppetizersFifteenView(ListView):
+
+
 
 
 class RecipeDetail(DetailView):
