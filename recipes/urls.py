@@ -1,5 +1,4 @@
 
-
 from django.urls import path
 from django.conf.urls import url
 from . import views
@@ -29,30 +28,31 @@ urlpatterns = [
     path('wege/przekaski/do-10-zl/', views.VeganAppetizersTenView.as_view(), name='vegan-appetizers-ten'),
     path('wege/przekaski/do-15-zl/', views.VeganAppetizersFifteenView.as_view(), name='vegan-appetizers-fifteen'),
 
-    # path('z-miesem/przekaski', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/przekaski/do-5-zl/', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/przekaski/do-10-zl/', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/przekaski/do-15-zl/', views.ProtectedView.as_view(), name=''),
-    #
-    # path('wege/obiady', views.ProtectedView.as_view(), name=''),
-    # path('wege/obiady/do-5-zl/', views.ProtectedView.as_view(), name=''),
-    # path('wege/obiady/do-10-zl/', views.ProtectedView.as_view(), name=''),
-    # path('wege/obiady/do-15-zl/', views.ProtectedView.as_view(), name=''),
-    #
-    # path('z-miesem/obiady', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/obiady/do-5-zl/', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/obiady/do-10-zl/', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/obiady/do-15-zl/', views.ProtectedView.as_view(), name=''),
-    #
-    # path('wege/desery', views.ProtectedView.as_view(), name=''),
-    # path('wege/desery/do-5-zl/', views.ProtectedView.as_view(), name=''),
-    # path('wege/desery/do-10-zl/', views.ProtectedView.as_view(), name=''),
-    # path('wege/desery/do-15-zl/', views.ProtectedView.as_view(), name=''),
-    #
-    # path('z-miesem/desery', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/desery/do-5-zl/', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/desery/do-10-zl/', views.ProtectedView.as_view(), name=''),
-    # path('z-miesem/desery/do-15-zl/', views.ProtectedView.as_view(), name=''),
+    path('z-miesem/przekaski', views.MeatAppetizersView.as_view(), name='meat-appetizers'),
+    path('z-miesem/przekaski/do-5-zl/', views.MeatAppetizersFiveView.as_view(), name='meat-appetizers-five'),
+    path('z-miesem/przekaski/do-10-zl/', views.MeatAppetizersTenView.as_view(), name='meat-appetizers-ten'),
+    path('z-miesem/przekaski/do-15-zl/', views.MeatAppetizersFifteenView.as_view(), name='meat-appetizers-fifteen'),
+
+    path('wege/obiady', views.VeganDinnersView.as_view(), name='vegan-dinners'),
+    path('wege/obiady/do-5-zl/', views.VeganDinnersFiveView.as_view(), name='vegan-dinners-five'),
+    path('wege/obiady/do-10-zl/', views.VeganDinnersTenView.as_view(), name='vegan-dinners-ten'),
+    path('wege/obiady/do-15-zl/', views.VeganDinnersFifteenView.as_view(), name='vegan-dinners-fifteen'),
+
+    path('z-miesem/obiady', views.MeatDinnersView.as_view(), name='meat-dinners'),
+    path('z-miesem/obiady/do-5-zl/', views.MeatDinnersFiveView.as_view(), name='meat-dinners-five'),
+    path('z-miesem/obiady/do-10-zl/', views.MeatDinnersTenView.as_view(), name='meat-dinners-ten'),
+    path('z-miesem/obiady/do-15-zl/', views.MeatDinnersFifteenView.as_view(), name='meat-dinners-fifteen'),
+
+    path('wege/desery', views.VeganDessertsView.as_view(), name='vegan-desserts'),
+    path('wege/desery/do-5-zl/', views.VeganDessertsFiveView.as_view(), name='vegan-desserts-five'),
+    path('wege/desery/do-10-zl/', views.VeganDessertsTenView.as_view(), name='vegan-desserts-ten'),
+    path('wege/desery/do-15-zl/', views.VeganDessertsFifteenView.as_view(), name='vegan-desserts-fifteen'),
+
+    path('z-miesem/desery', views.MeatDessertsView.as_view(), name='meat-desserts'),
+    path('z-miesem/desery/do-5-zl/', views.MeatDessertsFiveView.as_view(), name='meat-desserts-five'),
+    path('z-miesem/desery/do-10-zl/', views.MeatDessertsTenView.as_view(), name='meat-desserts-ten'),
+    path('z-miesem/desery/do-15-zl/', views.MeatDessertsFifteenView.as_view(), name='meat-desserts-fifteen'),
 
     url(r'^(?P<slug>[\w]-]+)/$', views.RecipeDetail.as_view(), name='detail'),
+
 ]
