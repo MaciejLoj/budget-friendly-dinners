@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="pl-PL">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="pl-PL">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="pl" class="no-js">
+<head>
+	<!-- Basic need -->
+	<title>Przepisy na każdą kieszeń!</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+	<!-- Mobile specific meta -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dosis:700' rel='stylesheet' type='text/css'>
+
+	<!-- CSS files  ========= ADDED to static ========== !!!!!!-->
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- JS files ===== ADDED to static ==== -->
+	<script src="{% static 'js/jquery.js' %}"></script>
+</head>
+<body>
+
+<div class="ht-page-wrapper">
+
+
+<!-- BEGIN | Header -->
+<header id="ht-header" class="">
+	<div class="mobile-control-toggle">
+		<div class="container">
+			<button type="button" class="mobile-nav-toggle" data-target="#menu-list">
+				<span class="sr-only">Toggle mobile menu</span>
+				<span class="icon-bar icon-bar-1"></span>
+				<span class="icon-bar icon-bar-2"></span>
+				<span class="icon-bar icon-bar-3"></span>
+			</button>
+		</div>
+	</div>
+	<!-- ./mobile-panels-control -->
+	<div class="mobile-nav">
+		<form class="ht-search-form" action="#">
+			<input type="text" placeholder="Type keyword ..." class=""/>
+			<button type="button" class="ht-search-form-toggle">
+				<span class="sr-only">Toggle search</span>
+				<i class="fa fa-search"></i>
+			</button>
+		</form>
+		<ul>
+			<li class="current-menu-item menu-item-has-children dropdown-menu">
+				<i class="sub-menu-toggle fa fa-chevron-down"></i>
+				<a href="">Properties</a>
+				<ul>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">Menu level 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">Menu level 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">Menu level 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">Menu level 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="mega-menu menu-item-has-children">
+				<i class="sub-menu-toggle fa fa-chevron-down"></i>
+				<a href="">Agents</a>
+				<ul>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">MENU LEVEL 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">MENU LEVEL 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">MENU LEVEL 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<i class="sub-menu-toggle fa fa-chevron-down"></i>
+						<a href="">MENU LEVEL 2</a>
+						<ul>
+							<li><a href=""><i class="fa fa-book"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-bullhorn"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-coffee"></i> Menu level 3</a></li>
+							<li><a href=""><i class="fa fa-gear"></i> Menu level 3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="">Pages</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</div>
+	<!-- / .mobile-nav -->
+
+	<!-- available classes: logo-center, logo-left -->
+	<div class="ht-main-navbar logo-center sticky-nav scroll-up-nav">
+		<div class="container">
+			<div class="inner">
+				<h1 id="ht-logo">
+					<a href="/">
+						<img src="{% static 'images/logo.png' %}" alt="">
+					</a>
+					Realty
+				</h1>
+				<!-- / #logo -->
+				<div class="ht-main-nav-wrapper">
+					<nav id="ht-main-nav">
+						<ul>
+
+							<li class="menu-item-has-children dropdown-menu">
+								<a href="/przepisy">PRZEPISY</a>
+								<ul>
+									<li class="menu-item-has-children">
+										<a href="{% url 'recipes:to-five' %}">DO 5 ZŁ</a>
+										<ul>
+											<li class="menu-item-has-children"><a href="recipe_single.html"><i class="ht-foodie-055"></i> WEGE</a>
+												<ul>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> WSZYSTKIE</a></li>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> PRZEKĄSKI</a></li>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> OBIADY</a></li>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> DESERY</a></li>
+												</ul>
+											</li>
+											<li class="menu-item-has-children"><a href="recipe_single_video.html"><i class="ht-foodie-063"></i> Z MIĘSEM</a>
+												<ul>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> WSZYSTKIE</a></li>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> PRZEKĄSKI</a></li>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> OBIADY</a></li>
+													<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> DESERY</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="#">DO 10 ZŁ</a>
+										<ul>
+											<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> WEGE</a></li>
+											<li><a href="recipe_single_video.html"><i class="ht-foodie-063"></i> Z MIĘSEM</a></li>
+										</ul>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="#">DO 15 ZŁ</a>
+										<ul>
+											<li><a href="recipe_single.html"><i class="ht-foodie-055"></i> WEGE</a></li>
+											<li><a href="recipe_single_video.html"><i class="ht-foodie-063"></i> Z MIĘSEM</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							<li><a href="/kontakt">KONTAKT</a></li>
+
+						</ul>
+						<ul>
+							{% if user.is_authenticated %}
+							<li style="color:white">WITAJ, {{ user.username }} !</li>
+
+							<li class="menu-item-has-children dropdown-menu">
+								<a href="recipe_index.html">MOJE KONTO</a>
+								<ul>
+									<li class="menu-item-has-children">
+										<a href="{% url 'accounts:user_info' %}">MOJE PRZEPISY</a>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="{% url 'recipes:create' %}">DODAJ PRZEPIS</a>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="{% url 'accounts:logout' %}">WYLOGUJ</a>
+									</li>
+
+								</ul>
+
+							<!--<li><a href="{% url 'accounts:user_info' %}">MOJE PRZEPISY</a></li>-->
+							<!--<li><a href="{% url 'accounts:logout' %}">WYLOGUJ</a></li>-->
+
+							{% else %}
+							<li><a href="{% url 'accounts:register' %}">ZAŁÓŻ KONTO</a></li>
+
+							<li><a href="{% url 'accounts:login' %}">ZALOGUJ</a></li>
+							{% endif %}
+						</ul>
+					</nav>
+					<!-- / #ht-main-nav -->
+				</div>
+				<!-- / .pull-right -->
+			</div>
+			<!-- / .inner -->
+		</div>
+		<!-- / .container -->
+		<button type="button" class="search-toggle" data-toggle="modal" data-target="#ht-search-form">
+			<span class="inner">
+				<i class="fa fa-search"></i>
+			</span>
+		</button>
+		<!-- ./ button#ht-search-form -->
+	</div>
+	<!-- / .ht-container -->
+</header>
+<!-- END | Header -->
+
+
+<section class="hs-slider single flexslider basic"
+         data-auto="true"
+         data-effect="fade"
+         data-navi="true"
+         data-pager="true"
+         data-slide-speed="5000"
+         data-animation-speed="1000"
+        >
+    <ul class="slides">
+        <li style="background-image: url = static('images/slides/1.jpg')" data-ht-parallax="500">
+            <div class="overlay"></div>
+            <div class="slide-content-wrapper container">
+                <div class="slide-content">
+                    <h3 class="entry-big">Przepisy na każdą kieszeń!</h3>
+                    <p class="entry-small"></p>
+                    <a class="entry-button" href="recipe_index.html">ZOBACZ WSZYSTKIE NASZE PRZEPISY!</a>
+                </div>
+            </div>
+        </li>
+        <li style="background-image: url = static('images/slides/2.jpg')" data-ht-parallax="500">
+            <div class="overlay"></div>
+            <div class="slide-content-wrapper container">
+                <div class="slide-content">
+                    <h3 class="entry-big">Codziennie nowy przepis!</h3>
+                    <p class="entry-small"></p>
+                    <a class="entry-button" href="recipe_index.html">ZOBACZ WSZYSTKIE NASZE PRZEPISY!</a>
+                </div>
+            </div>
+        </li>
+        <li style="background-image: url = static('images/slides/3.jpg')" data-ht-parallax="500">
+            <div class="overlay"></div>
+            <div class="slide-content-wrapper container">
+                <div class="slide-content">
+                    <h3 class="entry-big">Dodawaj przepisy i wygrywaj bony na akcesoria kuchenne! </h3>
+                    <p class="entry-small"></p>
+                    <a class="entry-button" href="recipe_index.html">ZOBACZ WSZYSTKIE NASZE PRZEPISY!</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.hs-content -->
+</section>
+<!-- / .hs-recent-posts -->
+
+<section class="ht-section hs-recipes grid">
+	<header class="hs-header">
+		<div class="container">
+			<h2 class="heading">Najwyżej oceniane</h2>
+			<ul class="isotope-filter" data-target="#grid-1">
+				<li class="is-filtered"><a href="#" data-filter="*">WSZYSTKIE</a></li>
+				<li><a href="#" data-filter=".filter-food">PRZEKĄSKI</a></li>
+				<li><a href="#" data-filter=".filter-beverages">OBIADY</a></li>
+				<li><a href="#" data-filter=".filter-dessert">DESERY</a></li>
+				<!--<li><a href="#" data-filter=".filter-pudding">PUDDING</a></li>-->
+			</ul>
+		</div>
+	</header>
+	<div class="hs-content">
+		<div class="container">
+			<div class="row">
+				<div class="isotope-grid" id="grid-1">
+					<div class="entry col-xs-12 col-sm-4 filter-food filter-pudding">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_1.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty easy" title="">Easy</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 filter-beverages">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_2.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty hard" title="">Hard</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 filter-dessert">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_3.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty master" title="">Master</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+				</div>
+				<!-- / .isotope-entry -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.ht-products.grid -->
+</section>
+<!-- /.ht-section -->
+
+<section class="ht-section hs-parallax hs-features" style="background-image: url = static('images/parallax/1.jpg')" data-ht-parallax="500">
+	<div class="overlay" style="background-color: rgba(0,0,0,.5);"></div>
+	<header class="hs-header">
+		<div class="container">
+			<h2 class="heading">CULINIER</h2>
+			<p class="sub-heading"> pusto</p>
+		</div>
+	</header>
+	<div class="hs-content">
+		<div class="container">
+			<div class="row">
+				<div class="entry col-xs-12 col-sm-4">
+					<p><i class="fa fa-bar-chart"></i></p>
+					<h3 class="entry-name">-</h3>
+					<p class="entry-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				</div>
+				<div class="entry col-xs-12 col-sm-4">
+					<p><i class="ht-foodie-036"></i></p>
+					<h3 class="entry-name">-</h3>
+					<p class="entry-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				</div>
+				<div class="entry col-xs-12 col-sm-4">
+					<p><i class="ht-foodie-093"></i></p>
+					<h3 class="entry-name">-</h3>
+					<p class="entry-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.hs-content -->
+</section>
+<!-- /.ht-section -->
+
+<section class="ht-section hs-recipes grid">
+	<header class="hs-header">
+		<div class="container">
+			<h2 class="heading">Ostatnio dodane</h2>
+			<p class="sub-heading">Voluptatem error laborum inventore, blanditiis aut.</p>
+		</div>
+		<ul class="isotope-filter" data-target="#grid-2">
+			<li class="is-filtered"><a href="#" data-filter="*">WSZYSTKIE</a></li>
+			<li><a href="#" data-filter=".filter-food">PRZEKĄSKI</a></li>
+			<li><a href="#" data-filter=".filter-beverages">OBIADY</a></li>
+			<li><a href="#" data-filter=".filter-dessert">DESERY</a></li>
+		</ul>
+	</header>
+	<div class="hs-content">
+		<div class="container">
+			<div class="row">
+				<div class="isotope-grid" id="grid-2">
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-food filter-pudding">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_1.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty easy" title="">Easy</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-beverages">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_2.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty hard" title="">Hard</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-dessert">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_3.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty master" title="">Master</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-food filter-pudding">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_1.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty easy" title="">Easy</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-beverages">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_2.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty hard" title="">Hard</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-dessert">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_3.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty master" title="">Master</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-food filter-pudding">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_1.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty easy" title="">Easy</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-beverages">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_2.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty hard" title="">Hard</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-dessert">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_3.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty master" title="">Master</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-food filter-pudding">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_1.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty easy" title="">Easy</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-beverages">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_2.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty hard" title="">Hard</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+					<div class="entry col-xs-12 col-sm-4 col-md-3 filter-dessert">
+						<div class="entry-inner">
+							<div class="entry-media">
+								<img src="{% static 'images/dishes/dish_3.jpg' %}" alt=""/>
+								<div class="entry-action">
+									<div class="entry-action-inner">
+										<span>
+											<a href="recipe_single.html">VIEW RECIPE</a>
+										</span>
+										<span>
+											<a href="#">BOOKMARK RECIPE</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-media -->
+							<div class="content-wrapper">
+								<h3 class="entry-name"><a href="recipe_single.html">Khatulistiwa Fruit Salad</a></h3>
+								<p class="entry-author">By Lina Sukowati</p>
+								<div class="entry-meta">
+									<div class="foo-wrapper">
+										<span class="meta-difficulty master" title="">Master</span>
+										<span class="meta-time">3 minutes</span>
+									</div>
+									<div class="meta-rate" title="4 star">
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star rated"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+							<!-- ./ entry-content -->
+						</div>
+						<!-- /.entry-inner -->
+					</div>
+					<!-- /.entry -->
+				</div>
+				<!-- / .isotope-entry -->
+			</div>
+			<!-- /.row -->
+			<p class="text-center">
+				<a href="/przepisy" class="ht-button view-more-button">
+					<i class="fa fa-arrow-left"></i> WIĘCEJ PRZEPISÓW <i class="fa fa-arrow-right"></i>
+				</a>
+			</p>
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.ht-products.grid -->
+</section>
+<!-- /.ht-section -->
+
+<section class="ht-section hs-footer-widget">
+	<h2 class="sr-only">Realty footer</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-3">
+				<div class="ht-widget hw-popular-recipes">
+					<h3 class="widget-title">NAJWYŻEJ OCENIANE</h3>
+					<article class="post">
+						<a href="post_single.html">
+							<div class="media">
+								<img src="{% static 'images/thumb/1.jpg' %}" alt="">
+							</div>
+							<div class="content">
+								<h4>Khatulistiwa Fruit Salad</h4>
+								<div class="meta-rate" title="4 star">
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</article>
+					<!-- /.post -->
+					<article class="post">
+						<a href="post_single.html">
+							<div class="media">
+								<img src="{% static 'images/thumb/2.jpg' %}" alt="">
+							</div>
+							<div class="content">
+								<h4>Home Made Italian Pizza</h4>
+								<div class="meta-rate" title="4 star">
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</article>
+					<!-- /.post -->
+					<article class="post">
+						<a href="post_single.html">
+							<div class="media">
+								<img src="{% static 'images/thumb/3.jpg' %}" alt="">
+							</div>
+							<div class="content">
+								<h4>Original Kupat Sayur</h4>
+								<div class="meta-rate" title="4 star">
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star rated"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</a>
+					</article>
+					<!-- /.post -->
+				</div>
+				<!-- / .ht-widget -->
+			</div>
+			<!-- /. widget colums -->
+			<div class="col-xs-12 col-sm-3">
+				<div class="ht-widget hw-popular-categories">
+					<h3 class="widget-title">KATEGORIE</h3>
+					<ul>
+						<li><a href="#">Przekąski</a></li>
+						<li><a href="#">Obiady</a></li>
+						<li><a href="#">Desery</a></li>
+					</ul>
+				</div>
+				<!-- /. ht-widget -->
+			</div>
+			<!-- /. widget colums -->
+			<div class="col-xs-12 col-sm-3">
+				<!--<div class="ht-widget hw-about">-->
+					<!--<h3 class="widget-title">ABOUT CULINIER TEMPLATE</h3>-->
+					<!--<p>Nunc vel lorem ligula, vitae vestibulum arcu. Suspendisse non purus mauris. Suspendisse vulputate ligula sed turpis fermentum sollicitudin. Quisque orci lorem, porta nec rutrum sit amet, auctor sodales sapien. </p>-->
+				<!--</div>-->
+				<!-- /. ht-widget -->
+				<div class="ht-widget hw-subscribe">
+					<h3 class="widget-title">SUBSKRYPCJA </h3>
+					<p class="caption">Bądz na bieżąco z wszystkimi przepisami !</p>
+					<form action="#">
+						<input type="text" placeholder="Email" />
+						<button type="submit">GO</button>
+					</form>
+					<p class="social">
+						<a href="#" class="fa fa-facebook" title=""></a>
+						<a href="#" class="fa fa-twitter" title=""></a>
+						<a href="#" class="fa fa-youtube" title=""></a>
+						<a href="#" class="fa fa-rss" title=""></a>
+					</p>
+				</div>
+				<!-- /. ht-widget -->
+			</div>
+			<!-- /. widget colums -->
+		</div>
+	</div>
+</section>
+
+<footer id="ht-footer">
+	<div class="container">
+		<p class="copyright">COPYRIGHT © 2014 CULINIER. POWERED BY WORDPRESS AND THEMEPE</p>
+		<ul class="footer-nav">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="event_list.html">EVENT</a></li>
+			<li><a href="recipe_index.html">PRZEPISY</a></li>
+			<li><a href="post_masonry.html">BLOG</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+			<li><a href="{% url 'accounts:login' %}">ZALOGUJ</a></li>
+		</ul>
+	</div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="ht-search-form" tabindex="-1" role="dialog" aria-labelledby="ht-search-form" aria-hidden="true">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<form action="#">
+					<input type="text" placeholder="Type keyword ..." autofocus />
+					<button class="search-button" type="button">
+						<span class="sr-only">Toggle search</span>
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / .hs-footer-widget -->
+
+</div>
+<!-- ./ht-page-wrapper -->
+
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
